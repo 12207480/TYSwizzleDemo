@@ -23,6 +23,8 @@
 
         ty_swizzleInstanceMethod(self, @selector(viewDidAppear:), @selector(TY_viewDidAppear:));
         ty_swizzleClassMethod(self, @selector(testSwizzle1ClassMothed), @selector(TY_testSwizzle1ClassMothed));
+        //ty_swizzleMethodAndStoreIMP(self, @selector(testSetOldIMP), (IMP)testSetNewIMP,nil);
+        ty_swizzleMethodIMP(self, @selector(testSetOldIMP), (IMP)testSetNewIMP);
         
         [self ty_swizzleMethodWithOrignalSel:@selector(viewWillAppear:) replacementSel:@selector(TY_viewWillAppear:)];
         [self ty_swizzleClassMethodWithOrignalSel:@selector(testSwizzle2ClassMothed) replacementSel:@selector(TY_testSwizzle2ClassMothed)];
@@ -34,6 +36,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [ViewController testSwizzle1ClassMothed];
     [ViewController testSwizzle2ClassMothed];
+    [self testSetOldIMP];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,9 +87,21 @@
     NSLog(@"%s",__FUNCTION__);
 }
 
+- (void)testSetOldIMP
+{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+void testSetNewIMP(id self, SEL _cmd)
+{
+    NSLog(@"%s",__FUNCTION__);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 @end
+
+
