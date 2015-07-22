@@ -14,6 +14,8 @@
 		D357A9031B5F387F00AE0AFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D357A9021B5F387F00AE0AFE /* Images.xcassets */; };
 		D357A9061B5F387F00AE0AFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D357A9041B5F387F00AE0AFE /* LaunchScreen.xib */; };
 		D357A9121B5F387F00AE0AFE /* TYSwizzleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D357A9111B5F387F00AE0AFE /* TYSwizzleDemoTests.m */; };
+		D357A9281B5F3F3900AE0AFE /* NSObject+TYSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D357A9251B5F3F3900AE0AFE /* NSObject+TYSwizzle.m */; };
+		D357A9291B5F3F3900AE0AFE /* TYSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D357A9271B5F3F3900AE0AFE /* TYSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		D357A90B1B5F387F00AE0AFE /* TYSwizzleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TYSwizzleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D357A9101B5F387F00AE0AFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D357A9111B5F387F00AE0AFE /* TYSwizzleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYSwizzleDemoTests.m; sourceTree = "<group>"; };
+		D357A9241B5F3F3900AE0AFE /* NSObject+TYSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TYSwizzle.h"; sourceTree = "<group>"; };
+		D357A9251B5F3F3900AE0AFE /* NSObject+TYSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TYSwizzle.m"; sourceTree = "<group>"; };
+		D357A9261B5F3F3900AE0AFE /* TYSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSwizzle.h; sourceTree = "<group>"; };
+		D357A9271B5F3F3900AE0AFE /* TYSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		D357A8F41B5F387F00AE0AFE /* TYSwizzleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D357A91B1B5F38A900AE0AFE /* TYSwizzle */,
 				D357A8F91B5F387F00AE0AFE /* AppDelegate.h */,
 				D357A8FA1B5F387F00AE0AFE /* AppDelegate.m */,
 				D357A8FC1B5F387F00AE0AFE /* ViewController.h */,
@@ -117,6 +124,17 @@
 				D357A9101B5F387F00AE0AFE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D357A91B1B5F38A900AE0AFE /* TYSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				D357A9261B5F3F3900AE0AFE /* TYSwizzle.h */,
+				D357A9271B5F3F3900AE0AFE /* TYSwizzle.m */,
+				D357A9241B5F3F3900AE0AFE /* NSObject+TYSwizzle.h */,
+				D357A9251B5F3F3900AE0AFE /* NSObject+TYSwizzle.m */,
+			);
+			path = TYSwizzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +240,8 @@
 				D357A8FE1B5F387F00AE0AFE /* ViewController.m in Sources */,
 				D357A8FB1B5F387F00AE0AFE /* AppDelegate.m in Sources */,
 				D357A8F81B5F387F00AE0AFE /* main.m in Sources */,
+				D357A9281B5F3F3900AE0AFE /* NSObject+TYSwizzle.m in Sources */,
+				D357A9291B5F3F3900AE0AFE /* TYSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
