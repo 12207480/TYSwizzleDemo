@@ -39,7 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s ----",__FUNCTION__);
 }
 
 - (void)TY_viewWillAppear:(BOOL)animated
@@ -53,7 +53,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s ----",__FUNCTION__);
 }
 
 - (void)TY_viewDidAppear:(BOOL)animated
@@ -64,7 +64,7 @@
 
 + (void)testSwizzle1ClassMothed
 {
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s ----",__FUNCTION__);
 }
 
 + (void)TY_testSwizzle1ClassMothed
@@ -75,7 +75,7 @@
 
 + (void)testSwizzle2ClassMothed
 {
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s ----",__FUNCTION__);
 }
 
 + (void)TY_testSwizzle2ClassMothed
