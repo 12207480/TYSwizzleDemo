@@ -65,6 +65,7 @@ BOOL  ty_swizzleMethodAndStoreIMP(Class aClass, SEL originalSel, IMP replacement
 {
     IMP imp = NULL;
     Method method = class_getInstanceMethod(aClass, originalSel);
+    
     if (method) {
         const char *type = method_getTypeEncoding(method);
         imp = class_replaceMethod(aClass, originalSel, replacementIMP, type);
@@ -74,7 +75,11 @@ BOOL  ty_swizzleMethodAndStoreIMP(Class aClass, SEL originalSel, IMP replacement
     }else{
         NSLog(@"original method %@ not found for class %@", NSStringFromSelector(originalSel), aClass);
     }
-    if (imp && orignalStoreIMP) { *orignalStoreIMP = imp; }
+    
+    if (imp && orignalStoreIMP)
+    {
+        *orignalStoreIMP = imp;
+    }
     return (imp != NULL);
 }
 
