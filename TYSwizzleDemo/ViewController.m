@@ -64,7 +64,7 @@
 - (void)TY_viewDidAppear:(BOOL)animated
 {
     [self TY_viewDidAppear:animated]; // this call viewDidAppear
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__FUNCTION__);        // so print viewDidAppear -> TY_viewDidAppear
 }
 
 + (void)testSwizzle1ClassMothed
@@ -75,7 +75,7 @@
 + (void)TY_testSwizzle1ClassMothed
 {
     [self TY_testSwizzle1ClassMothed]; // this call testSwizzleClassMothed
-    NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__FUNCTION__);         // so print testSwizzleClassMothed -> TY_testSwizzle1ClassMothed
 }
 
 + (void)testSwizzle2ClassMothed
@@ -85,8 +85,8 @@
 
 + (void)TY_testSwizzle2ClassMothed
 {
-    [self TY_testSwizzle2ClassMothed]; // this call testSwizzleClassMothed
-    NSLog(@"%s",__FUNCTION__);
+    [self TY_testSwizzle2ClassMothed]; // this call testSwizzle2ClassMothed
+    NSLog(@"%s",__FUNCTION__);         // so print testSwizzle2ClassMothed -> TY_testSwizzle2ClassMothed
 }
 
 - (void)testSetOldIMP
