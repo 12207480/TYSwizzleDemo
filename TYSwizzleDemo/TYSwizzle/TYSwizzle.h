@@ -8,11 +8,13 @@
 
 #import <objc/objc.h>
 
+// exchange instance method
 BOOL ty_swizzleInstanceMethod(Class aClass, SEL originalSel, SEL replacementSel);
 
+// exchange class method
 BOOL ty_swizzleClassMethod(Class aClass, SEL originalSel, SEL replacementSel);
 
+// exchange method with IMP
 IMP  ty_swizzleMethodIMP(Class aClass, SEL originalSel, IMP replacementIMP);
 
-// other way implement
 BOOL ty_swizzleMethodAndStoreIMP(Class aClass, SEL originalSel, IMP replacementIMP,IMP *orignalStoreIMP);
