@@ -3,7 +3,7 @@ method swizzling easy to use ,and test demo
 
 # usage
 
-C Function
+## C Function
 
 ```objc
 
@@ -20,7 +20,7 @@ BOOL ty_swizzleMethodAndStoreIMP(Class aClass, SEL originalSel, IMP replacementI
 
 ```
 
-NSObject Categary
+## NSObject Categary
 
 ```objc
 
