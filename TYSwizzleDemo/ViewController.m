@@ -74,7 +74,7 @@
 
 + (void)TY_testSwizzle1ClassMothed
 {
-    [self TY_testSwizzle1ClassMothed]; // call testSwizzleClassMothed
+    [self TY_testSwizzle1ClassMothed]; // this call testSwizzleClassMothed
     NSLog(@"%s",__FUNCTION__);
 }
 
@@ -85,7 +85,7 @@
 
 + (void)TY_testSwizzle2ClassMothed
 {
-    [self TY_testSwizzle2ClassMothed]; // call testSwizzleClassMothed
+    [self TY_testSwizzle2ClassMothed]; // this call testSwizzleClassMothed
     NSLog(@"%s",__FUNCTION__);
 }
 
