@@ -14,9 +14,9 @@ BOOL ty_swizzleInstanceMethod(Class aClass, SEL originalSel, SEL replacementSel)
 BOOL ty_swizzleClassMethod(Class aClass, SEL originalSel, SEL replacementSel);
 
 // exchange method with IMP, and store orignal IMP
-IMP  ty_swizzleMethodIMP(Class aClass, SEL originalSel, IMP replacementIMP);
-
 BOOL ty_swizzleMethodAndStoreIMP(Class aClass, SEL originalSel, IMP replacementIMP,IMP *orignalStoreIMP);
+
+IMP  ty_swizzleMethodIMP(Class aClass, SEL originalSel, IMP replacementIMP);
 
 ```
 
