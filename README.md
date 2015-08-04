@@ -1,5 +1,5 @@
 # TYSwizzleDemo
-method swizzling easy to use ,and test demo
+method swizzling easy to use ,C Function and NSObject Categary
 
 # usage
 
